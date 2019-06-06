@@ -1,3 +1,6 @@
+What I Had to Do to Get by 3D pPrinter back in operational order after wiping hte bootloader or maybe board never had one i dont know.
+
+
 # Alunar M508 Marlin Firmware
 
 This is (usually) the latest [Marlin](https://github.com/MarlinFirmware/Marlin) firmware tweaked and tailored for the Alunar M508 3D Printer. The settings are what work for my machine, with my setup, it may not be perfect for you.
