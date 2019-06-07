@@ -1,5 +1,7 @@
 What I Had to Do to Get by 3D pPrinter back in operational order after wiping hte bootloader or maybe board never had one i dont know.
 
+Words of caution do not Plug 12V into 5v BL Touch will render part useless.
+
 
 # Alunar M508 Marlin Firmware
 
