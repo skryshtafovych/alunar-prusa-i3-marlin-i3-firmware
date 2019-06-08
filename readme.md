@@ -2,6 +2,8 @@ What I Had to Do to Get by 3D pPrinter back in operational order after wiping ht
 
 Words of caution do not Plug 12V into 5v BL Touch will render part useless.
 
+# Board Specs
+http://greatprinterstore.blogspot.com/2016/10/cheap-lsee-3d-v10-version-mainboard.html
 
 # Alunar M508 Marlin Firmware
 
