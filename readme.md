@@ -1,3 +1,32 @@
+# StackOverflow
+This is what i folllowed to get working copy BLTouch
+The LSEE 3D is basically a RAMPS board (your linked source also shows that the used MOTHERBOARD is a RAMPS board: #define MOTHERBOARD BOARD_RAMPS_14_EFB), this implies that all pins of your board are the same as a RAMPS board. To connect the 3 pin header of the BLTouch sensor you need to connect the red wire to +5 V and the black wire to ground; the orange wire needs to be connected to an available PWM pin. As the LSEE board does not have many exposed (free) pins for you to use, you need to re-use one of the existing PWM pins that you do not use. An example is the pin nr. 2. From the pins_RAMPS.h file you see in the limit switches section:
+
+//
+// Limit Switches
+//
+#define X_MIN_PIN           3
+#ifndef X_MAX_PIN
+  #define X_MAX_PIN         2
+#endif
+It appears, from the image, that your board does have max limit end stop switches header pins available. What you could do is use the X_MAX_PIN for the BLTouch sensor.
+
+This implies that you need to assign the servo pin to pin nr. 2.
+
+From the servos section of the same pins_RAMPS.h file you see that the servos are either connected to pin 7 or pin 11 (depending on the board, your linked sources use the 1.4 version).
+
+//
+// Servos
+//
+#ifdef IS_RAMPS_13
+  #define SERVO0_PIN        7   // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
+#else
+  #define SERVO0_PIN       11
+#endif
+Using the linked sources, the 11 should be replaced with a 2. This implies that you can connect the orange wire to the "signal" pin of the X_MAX end stop connector.
+
+
+
 What I Had to Do to Get by 3D pPrinter back in operational order after wiping hte bootloader or maybe board never had one i dont know.
 
 Words of caution do not Plug 12V into 5v BL Touch will render part useless.
