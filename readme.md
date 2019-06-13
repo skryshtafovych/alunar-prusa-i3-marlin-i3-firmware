@@ -1,4 +1,4 @@
-StackOverflow
+# StackOverflow
 This is what i folllowed to get working copy BLTouch The LSEE 3D is basically a RAMPS board (your linked source also shows that the used MOTHERBOARD is a RAMPS board: #define MOTHERBOARD BOARD_RAMPS_14_EFB), this implies that all pins of your board are the same as a RAMPS board. To connect the 3 pin header of the BLTouch sensor you need to connect the red wire to +5 V and the black wire to ground; the orange wire needs to be connected to an available PWM pin. As the LSEE board does not have many exposed (free) pins for you to use, you need to re-use one of the existing PWM pins that you do not use. An example is the pin nr. 2. From the pins_RAMPS.h file you see in the limit switches section:
 ```
 //
